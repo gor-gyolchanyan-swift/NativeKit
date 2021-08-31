@@ -27,11 +27,11 @@ where ViewType: NativeViewRepresentable {
         internal typealias NSViewType = ViewType.NativeViewType
 
         internal func makeNSView(context: Context) -> NSViewType {
-            view.makeNativeView()
+            view.makeNativeView(context: .init(context))
         }
 
         internal func updateNSView(_ nsView: NSViewType, context: Context) {
-            view.updateNativeView(nsView)
+            view.updateNativeView(nsView, context: .init(context))
         }
 
         // MARK: - SwiftUI.NSViewRepresentable - Coordinator
@@ -51,11 +51,11 @@ where ViewType: NativeViewRepresentable {
         internal typealias UIViewType = ViewType.NativeViewType
 
         internal func makeUIView(context: Context) -> UIViewType {
-            view.makeNativeView()
+            view.makeNativeView(context: .init(context))
         }
 
         internal func updateUIView(_ uiView: UIViewType, context: Context) {
-            view.updateNativeView(uiView)
+            view.updateNativeView(uiView, context: .init(context))
         }
 
         // MARK: - SwiftUI.UIViewRepresentable - Coordinator
@@ -75,11 +75,11 @@ where ViewType: NativeViewRepresentable {
         internal typealias WKInterfaceObjectType = ViewType.NativeViewType
 
         internal func makeWKInterfaceObject(context: Context) -> WKInterfaceObjectType {
-            view.makeNativeView()
+            view.makeNativeView(context: .init(context))
         }
 
         internal func updateWKInterfaceObject(_ wkInterfaceObject: WKInterfaceObjectType, context: Context) {
-            view.updateNativeView(wkInterfaceObject)
+            view.updateNativeView(wkInterfaceObject, context: .init(context))
         }
 
         // MARK: - SwiftUI.WKInterfaceObjectRepresentable - Coordinator

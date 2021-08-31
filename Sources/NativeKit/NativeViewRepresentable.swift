@@ -9,13 +9,17 @@ import SwiftUI
 @available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
 public protocol NativeViewRepresentable: View {
 
+    // MARK: - NativeViewRepresentable - Context
+
+    typealias Context = NativeViewRepresentableContext<Self>
+
     // MARK: - NativeViewRepresentable - NativeView
 
     associatedtype NativeViewType: NativeView
 
-    func makeNativeView() -> NativeViewType
+    func makeNativeView(context: Context) -> NativeViewType
 
-    func updateNativeView(_ nativeView: NativeViewType)
+    func updateNativeView(_ nativeView: NativeViewType, context: Context)
 
     // MARK: - NativeViewRepresentable - Coordinator
 
