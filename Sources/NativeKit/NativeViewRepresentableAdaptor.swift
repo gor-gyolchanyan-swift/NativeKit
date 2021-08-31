@@ -39,7 +39,7 @@ where ViewType: NativeViewRepresentable {
         internal typealias Coordinator = ViewType.Coordinator
 
         internal func makeCoordinator() -> Coordinator {
-            view.makCoordinator()
+            view.makeCoordinator()
         }
     }
 #elseif os(iOS) || os(tvOS)
@@ -63,7 +63,7 @@ where ViewType: NativeViewRepresentable {
         internal typealias Coordinator = ViewType.Coordinator
 
         internal func makeCoordinator() -> Coordinator {
-            view.makCoordinator()
+            view.makeCoordinator()
         }
     }
 #elseif os(watchOS)
@@ -87,7 +87,7 @@ where ViewType: NativeViewRepresentable {
         internal typealias Coordinator = ViewType.Coordinator
 
         internal func makeCoordinator() -> Coordinator {
-            view.makCoordinator()
+            view.makeCoordinator()
         }
     }
 #endif
