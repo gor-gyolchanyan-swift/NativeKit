@@ -9,7 +9,7 @@ import SwiftUI
     @available(macOS 10.15, *)
     public typealias NativeHostingController = SwiftUI.NSHostingController
 #elseif os(iOS) || os(tvOS)
-    @available(macCatalyst 13.0, iOS 13.0, tvOS 13.0, *)
+    @available(iOS 13.0, tvOS 13.0, *)
     public typealias NativeHostingController = SwiftUI.UIHostingController
 #elseif os(watchOS)
     @available(watchOS 6.0, *)

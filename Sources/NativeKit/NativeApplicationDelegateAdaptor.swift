@@ -9,7 +9,7 @@ import SwiftUI
     @available(macOS 11.0, *)
     public typealias NativeApplicationDelegateAdaptor = SwiftUI.NSApplicationDelegateAdaptor
 #elseif os(iOS) || os(tvOS)
-    @available(macCatalyst 14.0, iOS 14.0, tvOS 14.0, *)
+    @available(iOS 14.0, tvOS 14.0, *)
     public typealias NativeApplicationDelegateAdaptor = SwiftUI.UIApplicationDelegateAdaptor
 #elseif os(watchOS)
     @available(watchOS 7.0, *)
