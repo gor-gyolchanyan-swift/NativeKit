@@ -34,7 +34,7 @@
     where Coordinator == Void {
 
         public func makeCoordinator() -> Coordinator {
-            // This routine is intentionally left blank.
+            return ()
         }
     }
 
